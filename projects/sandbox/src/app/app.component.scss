@@ -1,0 +1,19 @@
+:host {
+  .block {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+
+    &.block-orange {
+      background-color: orange;
+    }
+
+    &.block-tomato {
+      background-color: tomato;
+    }
+
+    &.block-coral {
+      background-color: coral ;
+    }
+  }
+}

@@ -3,6 +3,32 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "accordion": [
+        "dist/accordion/accordion",
+        "dist/accordion"
+      ],
+      "calendar": [
+        "dist/calendar/calendar",
+        "dist/calendar"
+      ],
+      "components": [
+        "dist/components/components",
+        "dist/components"
+      ],
+      "input-select": [
+        "dist/input-select/input-select",
+        "dist/input-select"
+      ],
+      "slider": [
+        "dist/slider/slider",
+        "dist/slider"
+      ],
+      "tabs": [
+        "dist/tabs/tabs",
+        "dist/tabs"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,

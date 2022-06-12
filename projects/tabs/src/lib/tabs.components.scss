@@ -1,0 +1,15 @@
+:host {
+  .tabs-container {
+    display: flex;
+    flex-direction: row;
+
+    .tab-header {
+      padding: 10px 25px;
+      cursor: pointer;
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
