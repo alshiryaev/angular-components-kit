@@ -18,5 +18,6 @@ module.exports = {
     'new-cap': 0,
     'require-jsdoc': 0,
     'indent': 0,
+    'max-len': 0,
   },
 };
