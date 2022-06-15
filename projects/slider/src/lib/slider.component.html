@@ -1,1 +1,13 @@
-<ng-container *ngTemplateOutlet="slides[activeSlideIndex]"></ng-container>
+<div class="slider">
+  <div>
+    <button class="nav-button"><</button>
+  </div>
+  <div class="slider-content">
+    <div></div>
+    <ng-container
+      *ngTemplateOutlet="slides[activeSlideIndex]"></ng-container>
+  </div>
+  <div>
+    <button class="nav-button">></button>
+  </div>
+</div>
