@@ -1,30 +1,10 @@
-<h1>Components</h1>
-<section>
-  <header>
-    <h3>Tabs</h3>
-  </header>
-  <main>
-    <sa-tabs>
-      <sa-tab header="First">
-        <div>
-          <h1>First tab</h1>
-          <div class="block block-orange"></div>
-        </div>
-      </sa-tab>
-      <sa-tab header="Second">
-        <h2>Second tab</h2>
-        <div class="block block-tomato"></div>
-
-      </sa-tab>
-      <sa-tab header="Third">
-        <h3>Third tab</h3>
-        <div class="block block-coral"></div>
-
-      </sa-tab>
-    </sa-tabs>
-  </main>
-</section>
-<section>
-  <header>Accordion</header>
-  <sa-accordion></sa-accordion>
-</section>
+<h1>Library</h1>
+<main class="main-page">
+  <nav class="navigation">
+    <a class="link" routerLinkActive="active" routerLink="/tabs">Tabs</a>
+    <a class="link" routerLinkActive="active" routerLink="/slider">Slider</a>
+  </nav>
+  <section class="examples">
+    <router-outlet></router-outlet>
+  </section>
+</main>

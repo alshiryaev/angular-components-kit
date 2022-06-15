@@ -1,20 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterContentInit, Component, ContentChildren, OnInit, QueryList, TemplateRef} from '@angular/core';
+import {SliderItemDirective} from './slider-item.directive';
 
 @Component({
-  selector: 'lib-slider',
-  template: `
-    <p>
-      slider works!
-    </p>
-  `,
-  styles: [
-  ]
+  selector: 'sa-slider',
+  templateUrl: 'slider.component.html',
+  styleUrls: ['./slider.component.scss'],
 })
-export class SliderComponent implements OnInit {
+export class SliderComponent implements AfterContentInit {
+  @ContentChildren(SliderItemDirective, {read: TemplateRef})
+  readonly slidersContent!: QueryList<TemplateRef<SliderItemDirective>>;
 
-  constructor() { }
+  slides: TemplateRef<SliderItemDirective>[] = [];
 
-  ngOnInit(): void {
+  constructor() {
   }
 
+  ngAfterContentInit(): void {
+    this.slides = this.slidersContent.toArray();
+  }
 }

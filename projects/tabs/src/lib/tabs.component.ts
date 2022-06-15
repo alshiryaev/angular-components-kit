@@ -1,9 +1,11 @@
 import {
-  AfterViewInit,
+  AfterContentInit,
+  ChangeDetectionStrategy, ChangeDetectorRef,
   Component,
   ContentChildren,
+  EventEmitter,
+  Output,
   QueryList,
-  Output, EventEmitter,
 } from '@angular/core';
 import {TabComponent} from './tab/tab.component';
 
@@ -11,8 +13,9 @@ import {TabComponent} from './tab/tab.component';
   selector: 'sa-tabs',
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.components.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TabsComponent implements AfterViewInit {
+export class TabsComponent implements AfterContentInit {
   tabs: TabComponent[] = [];
   activeTabIndex: number = 0;
   @ContentChildren(TabComponent)
@@ -21,8 +24,15 @@ export class TabsComponent implements AfterViewInit {
   @Output()
   readonly selectedTabIndexChanged = new EventEmitter<number>();
 
-  ngAfterViewInit(): void {
+  constructor(private readonly cdr: ChangeDetectorRef) {
+  }
+
+  ngAfterContentInit(): void {
     this.tabs = this.tabComponents.toArray();
+    setTimeout(() => {
+      this.selectTabByIndex(this.activeTabIndex);
+      this.cdr.markForCheck();
+    }, 10);
   }
 
   tabClick(index: number): void {

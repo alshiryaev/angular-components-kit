@@ -1,16 +1,17 @@
-import { NgModule } from '@angular/core';
-import { SliderComponent } from './slider.component';
-
-
+import {NgModule} from '@angular/core';
+import {SliderComponent} from './slider.component';
+import {SliderItemDirective} from './slider-item.directive';
 
 @NgModule({
   declarations: [
-    SliderComponent
+    SliderComponent,
+    SliderItemDirective,
   ],
   imports: [
   ],
   exports: [
-    SliderComponent
+    SliderComponent,
+    SliderItemDirective,
   ]
 })
 export class SliderModule { }

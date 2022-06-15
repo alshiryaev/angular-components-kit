@@ -1,19 +1,27 @@
 :host {
-  .block {
-    width: 300px;
-    height: 300px;
-    border: 1px solid black;
 
-    &.block-orange {
-      background-color: orange;
+  .main-page {
+    display: flex;
+
+    .navigation {
+      width: 100%;
+      max-width: 35%;
+
+      .link {
+        display: block;
+        padding: 10px 25px;
+
+        &.active {
+          color: #fff;
+          background-color: tomato;
+        }
+      }
     }
 
-    &.block-tomato {
-      background-color: tomato;
-    }
-
-    &.block-coral {
-      background-color: coral ;
+    .examples {
+      width: 100%;
     }
   }
+
+
 }
