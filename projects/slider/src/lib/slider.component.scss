@@ -3,6 +3,13 @@
   .slider {
     display: flex;
 
+    .navigation {
+      margin: 0 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     &-content {
       display: flex;
       justify-content: center;
@@ -19,5 +26,10 @@
     border-radius: 50%;
     width: 36px;
     height: 36px;
+
+    &:hover {
+      background-color: #e2e2e2;
+      border-color: transparent;
+    }
   }
 }

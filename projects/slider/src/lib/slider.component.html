@@ -1,13 +1,13 @@
 <div class="slider">
-  <div>
-    <button class="nav-button"><</button>
+  <div class="navigation">
+    <button (click)="navigate(enums.Direcition.Left)" class="nav-button"><</button>
   </div>
   <div class="slider-content">
     <div></div>
     <ng-container
       *ngTemplateOutlet="slides[activeSlideIndex]"></ng-container>
   </div>
-  <div>
-    <button class="nav-button">></button>
+  <div class="navigation">
+    <button (click)="navigate(enums.Direcition.Right)"  class="nav-button">></button>
   </div>
 </div>
