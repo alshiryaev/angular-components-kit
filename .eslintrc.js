@@ -20,4 +20,14 @@ module.exports = {
     'indent': 0,
     'max-len': 0,
   },
+  'overrides': [
+    {
+      'files': ['*.component.html'],
+      'parser': '@angular-eslint/template-parser',
+      'rules': {
+        'max-len': 0,
+      },
+      'plugins': ['@angular-eslint/template'],
+    },
+  ],
 };
