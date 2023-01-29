@@ -4,11 +4,23 @@
     flex-direction: row;
 
     .tab-header {
+      display: flex;
+      justify-content: center;
+      position: relative;
       padding: 10px 25px;
       cursor: pointer;
+    }
+
+    .active-tab {
+      background-color: transparent;
+      position: absolute;
+      bottom: 5px;
+      height: 2px;
+      width: 90%;
+
 
       &.active {
-        text-decoration: underline;
+        background-color: #000000;
       }
     }
   }
